@@ -1,0 +1,25 @@
+package Ad.service.service;
+
+import java.util.List;
+
+import Ad.model.AdView;
+import Ad.service.Iservice.IadViewService;
+
+public class adViewService implements IadViewService {
+
+	@Override
+	public List<AdView> getAds() {
+		return null;
+	}
+
+	@Override
+	public AdView add(AdView a) {
+		return null;
+	}
+
+	@Override
+	public String isLocationAvailable(int location) {
+		return null;
+	}
+
+}

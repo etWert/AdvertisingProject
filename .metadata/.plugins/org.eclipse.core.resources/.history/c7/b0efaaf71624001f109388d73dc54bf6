@@ -1,0 +1,41 @@
+package Ad.service.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import Ad.dao.IadViewRepository;
+import Ad.model.AdView;
+import Ad.service.Iservice.IadViewService;
+
+public class adViewService implements IadViewService {
+
+	@Autowired
+	private IadViewRepository rep;
+	
+	@Override
+	public ArrayList<AdView> getAds() {
+		ArrayList<AdView> ads=new ArrayList<>();
+		rep.findAll().forEach(ad->ads.add(ad));
+		if(ads!=null) {
+			return ads;
+		}
+		return null;
+	}
+
+	@Override
+	public boolean add(AdView a) {
+		if(rep.existsById(a.getId())) {
+			return false;
+		}
+		a.setCurrentCount(0);
+		rep.save(a);
+		return true;
+	}
+
+	@Override
+	public String isLocationAvailable(int location) {
+		return null;
+	}
+
+}

@@ -1,0 +1,11 @@
+package Ad.service.Iservice;
+import java.util.List;
+
+import Ad.model.AdView;
+
+public interface IadViewService {
+	
+	List<AdView> getAds();
+	AdView add(AdView a);
+	String isLocationAvailable(int location);
+}

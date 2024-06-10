@@ -1,0 +1,30 @@
+package Ad.service.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import Ad.dao.IadViewRepository;
+import Ad.model.AdView;
+import Ad.service.Iservice.IadViewService;
+
+@Service
+public class adService implements IadViewService{
+
+	@Autowired
+	private IadViewRepository rep;
+	
+	@Override
+	public List<AdView> getAds() {
+//		List<Ad>ads=(List<Ad>) rep.findAll();
+//צריך להחזיר את כל סוגי הפרסומות????		
+		return null;
+	}
+
+	@Override
+	public AdView add(AdView a) {
+		return null;
+	}
+
+}

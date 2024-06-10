@@ -1,0 +1,5 @@
+package Ad.service.service;
+
+public class adViewService implements IadViewService {
+
+}
